@@ -1,11 +1,6 @@
 import React from 'react';
 
 const SearchAnime = ({searchTerm}) => {
- 
-
-
-
-
 
     return (
         <div> 

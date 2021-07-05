@@ -12,7 +12,7 @@ const [searchTerm, setSearchTerm] = useState('Naruto')
     <div className="App">
       <Header searchTerm = {searchTerm}/>
       <SearchAnime  searchTerm = {searchTerm}/>
-      <AnimeList />
+      <AnimeList searchTerm = {searchTerm}/>
     </div>
   );
 }
