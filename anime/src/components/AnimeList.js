@@ -9,8 +9,7 @@ useEffect(()=>{
     fetch(`https://api.jikan.moe/v3/search/anime?q=${searchTerm}`)
     .then((response) => response.json())
     .then((data) =>{
-        // console.log(data.results[0].episodes)
-        console.log(data.results)
+        // console.log(data.results)
         setAnimes(data.results)
     });
 },[searchTerm]);
@@ -18,7 +17,6 @@ useEffect(()=>{
     return (
      <ul>{
     //    console.log(animes,'animes')
-
     animes.map(anime=>{ 
         return(
         
@@ -28,14 +26,9 @@ useEffect(()=>{
         <p>{anime.rated}</p>
         <p>{anime.score}</p>
         <img src={anime.image_url} alt={anime.title}></img>
-
-    </li>)
-        
+    </li>)   
     })
-
-        
-        }
-     </ul>
+     }</ul>
     );
 };
 

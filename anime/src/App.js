@@ -6,12 +6,12 @@ import { useState } from 'react';
 
 function App() {
 
-const [searchTerm, setSearchTerm] = useState('Naruto')
+const [searchTerm, setSearchTerm] = useState('One piece')
 
   return (
     <div className="App">
       <Header searchTerm = {searchTerm}/>
-      <SearchAnime  searchTerm = {searchTerm}/>
+      <SearchAnime  setSearchTerm = {setSearchTerm}/>
       <AnimeList searchTerm = {searchTerm}/>
     </div>
   );
