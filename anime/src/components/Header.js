@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-const Header = ({searchTerm}) => {
-    return (
-        <div>
-            <h1>{searchTerm} Anime List</h1>
-        </div>
-    );
+const Header = ({ searchTerm }) => {
+  return (
+    <div>
+      <h1 className="heading">{searchTerm} anime list</h1>
+    </div>
+  );
 };
 
 export default Header;

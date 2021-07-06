@@ -1,8 +1,75 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+/********** ELEMENT TAGS *******/
+
+button {
+  position: relative;
+  left: 28%;
+  bottom: 63px;
 }
 
 ul {
   list-style-type: none;
 }
 
+/********** ID TAGS *******/
+
+#animeName {
+  width: 30%;
+  margin: auto;
+  display: inline-block;
+}
+
+/********** CLASSES TAGS *******/
+
+.App {
+  text-align: center;
+  font-family: "Merriweather", serif;
+}
+
+.card {
+  margin: auto;
+}
+
+.heading {
+  margin: 10% 0 5% 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.row {
+  text-align: center;
+}
+
+.searchText {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+@media screen and (device-aspect-ratio: 40/71) {
+  /********** ELEMENT TAGS *******/
+
+  button {
+    bottom: 5px;
+    left: 0%;
+    position: relative;
+  }
+
+  /********** ID TAGS *******/
+
+  #animeName {
+    width: 50%;
+    margin: auto;
+    display: block;
+  }
+
+  /********** CLASSES TAGS *******/
+
+  .heading {
+    font-size: 25px;
+  }
+
+  .searchText {
+    font-size: 1rem;
+  }
+}
