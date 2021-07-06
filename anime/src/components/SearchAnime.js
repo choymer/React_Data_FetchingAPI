@@ -6,18 +6,27 @@ import { Button, Form } from "react-bootstrap";
 
 const SearchAnime = ({ setSearchTerm }) => {
   const [newSearchTerm, setNewSearchTerm] = useState("");
+  const [error, setError] = useState("");
 
   /*  console.log(newSearchTerm); //to verify the setNewSearchTerm is listening to the event on change. */
 
   return (
     <Form
       onSubmit={(event) => {
+        const regex = /^([^\s][^\0-9]*[A-Za-z0-9]\s*)[^\s]*$/;
+
         // prevent the forms default behaviour
         event.preventDefault();
-        // render setSearchTerm from App with the value of newSearchTerm(client input)
-        setSearchTerm(newSearchTerm);
-        // reset the input to be empty
-        setNewSearchTerm("");
+        //validation that the search term isn't empty or start with an space
+        if (newSearchTerm.length > 0 && regex.test(newSearchTerm)) {
+          // render setSearchTerm from App with the value of newSearchTerm(client input)
+          setSearchTerm(newSearchTerm);
+          // reset the input to be empty
+          setNewSearchTerm("");
+          setError("");
+        } else {
+          setError("❌ Only accept characters between A-z at the beginning ❌");
+        }
       }}
     >
       {" "}
@@ -38,6 +47,7 @@ const SearchAnime = ({ setSearchTerm }) => {
       <Button variant="primary" type="submit">
         Search
       </Button>
+      <p className="error">{error}</p>
     </Form>
   );
 };

@@ -32,6 +32,11 @@ ul {
   margin: auto;
 }
 
+.card:hover {
+  -webkit-box-shadow: 0px 0px 13px 3px #000000;
+  box-shadow: 0px 0px 13px 3px #000000;
+}
+
 .heading {
   margin: 10% 0 5% 0;
   font-family: "Montserrat", sans-serif;
