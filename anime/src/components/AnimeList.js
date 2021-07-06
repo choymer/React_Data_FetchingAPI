@@ -22,6 +22,7 @@ const AnimeList = ({ searchTerm }) => {
 
   return (
     <Container>
+      {/* {console.log(animes)} */}
       <Row>
         {/* <ul> */}
         {animes.map((anime) => {
@@ -30,20 +31,27 @@ const AnimeList = ({ searchTerm }) => {
             // {
 
             <Col xs={12} s={6} md={4} key={anime.mal_id} className="mb-4 mt-4">
-              <Card style={{ width: "12rem" }}>
-                <Card.Img
-                  variant="top"
-                  src={anime.image_url}
-                  alt={anime.title}
-                />
+              <a
+                href={anime.url}
+                target="_blank"
+                className="card-links"
+                rel="noreferrer"
+              >
+                <Card style={{ width: "12rem" }}>
+                  <Card.Img
+                    variant="top"
+                    src={anime.image_url}
+                    alt={anime.title}
+                  />
 
-                <Card.Body>
-                  <Card.Title>{anime.title}</Card.Title>
-                  <Card.Text>Episodes: {anime.episodes}</Card.Text>
-                  <Card.Text>Rating: {anime.rated}</Card.Text>
-                  <Card.Text>Score: {anime.score}</Card.Text>
-                </Card.Body>
-              </Card>
+                  <Card.Body>
+                    <Card.Title>{anime.title}</Card.Title>
+                    <Card.Text>Episodes: {anime.episodes}</Card.Text>
+                    <Card.Text>Rating: {anime.rated}</Card.Text>
+                    <Card.Text>Score: {anime.score}</Card.Text>
+                  </Card.Body>
+                </Card>
+              </a>
             </Col>
 
             // }
